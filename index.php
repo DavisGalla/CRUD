@@ -13,6 +13,7 @@
         <ul>
             <li><a href="#" id="createUserBtn">Create User</a></li>
             <li><a href="#" id="readUserBtn">Read User</a></li>
+            <!-- <li><a href="#" id="uploadBtn">Upload File</a></li> -->
         </ul>
     </nav>
 
@@ -54,6 +55,16 @@
         <h2>Read Users</h2>
         <p>Coming soon...</p>
     </section>
+
+    <!-- <section id="uploadSection" style="display: none;">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="drop-zone">
+                <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                <input type="file" name="myFile" class="drop-zone__input" id="fileInput">
+            </div>
+            <button type="submit" class="wave-button">Upload File</button>
+        </form>
+    </section> -->
 
     <script src="script.js"></script>
 </body>

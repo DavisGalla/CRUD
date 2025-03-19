@@ -1,18 +1,30 @@
 // Get buttons and sections
 const createUserBtn = document.getElementById('createUserBtn');
 const readUserBtn = document.getElementById('readUserBtn');
+const uploadBtn = document.getElementById('uploadBtn');
 const createUserSection = document.getElementById('createUserSection');
 const readUserSection = document.getElementById('readUserSection');
+const uploadSection = document.getElementById('uploadSection');
 
 // Toggle sections when menu items are clicked
 createUserBtn.addEventListener('click', () => {
     createUserSection.style.display = 'block';
     readUserSection.style.display = 'none';
+    uploadSection.style.display = 'none';
+
+});
+
+uploadBtn.addEventListener('click', () => {
+    createUserSection.style.display = 'none';
+    readUserSection.style.display = 'none';
+    uploadSection.style.display = 'block';
 });
 
 readUserBtn.addEventListener('click', () => {
     createUserSection.style.display = 'none';
     readUserSection.style.display = 'block';
+    uploadSection.style.display = 'none';
+
 });
 
 // Handle form submission (basic)
@@ -71,7 +83,11 @@ document.getElementById('readUserBtn').addEventListener('click', async function 
                     <td>
                         <form action="edit_user.php" method="GET">
                             <input type="hidden" name="id" value="${user.id}">
-                            <button type="submit">Edit</button>
+                            <button type="submit" class="wave-button">Edit</button>
+                        </form>
+                        <form action="delete_user.php" method="POST">
+                            <input type="hidden" name="id" value="${user.id}">
+                            <button type="submit" class="wave-button">Delete</button>
                         </form>
                     </td>
                 </tr>
